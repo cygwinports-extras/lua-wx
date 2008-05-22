@@ -1,0 +1,32 @@
+WX_VERSION=${PV_MAJ_MIN}
+inherit lua wxwidgets
+
+DESCRIPTION="Lua wxWidgets bindings"
+HOMEPAGE="http://wxlua.sourceforge.net/"
+SRC_URI="mirror://sourceforge/wxlua/wxLua-${PV}-src.tar.gz"
+SRC_DIR="wxLua"
+
+src_compile() {
+	cd ${B}
+	cygconf \
+		--includedir=/usr/include/wx-${WX_VERSION} \
+		--disable-customwxbind-install \
+		--disable-wxluacan-app \
+		--disable-wxluafreeze-app \
+		--enable-wxluadebug --enable-wxluasocket \
+		--enable-luamodule \
+		--enable-systemlua \
+		--with-wx-config=${WX_CONFIG}
+
+	sed -e 's|-I\./\$(|-I$(|g' -i {apps,modules}/Makefile
+
+	cygmake -j1 -C modules/ LDFLAGS=-Wl,--enable-auto-image-base
+	cygmake -j1 -C apps/ LDFLAGS_GUI=
+}
+
+src_install() {
+	cd ${B}
+	cyginstall
+	mv ${D}/usr/lib/*.dll ${D}/usr/bin/
+	rm -f ${D}/usr/include/wx-${WX_VERSION}/l*.h
+}
