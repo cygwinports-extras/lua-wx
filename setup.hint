@@ -1,5 +1,5 @@
 category: Gnome Lua
-requires: cygwin lua wx28-base wx28-gtk2 wx28-stedit
+requires: lua wx28-base wx28-gtk2 wx28-stedit
 sdesc: "Lua wxGTK bindings"
 ldesc: "wxLua is a set of bindings to the wxWidgets library for the Lua 
 programming language. With wxLua you can write programs in Lua that use 
