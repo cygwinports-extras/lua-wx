@@ -10,20 +10,22 @@ image loading and saving, drawing, sockets, streams, printing, clipboard
 access... and much more.
 
 Runtime requirements:
-  cygwin-1.5.25-11
-  lua-5.1.3-1
-  wx28-base-2.8.7-1
-  wx28-gtk2-2.8.7-1
-  wx28-stedit-1.2.5-1
+  cygwin-1.7.0-67
+  libgcc1-4.3.4-3
+  libstdc++6-4.3.4-3
+  libwx_baseu2.8_0-2.8.10.1-2
+  libwx_gtk2u2.8_0-2.8.10.1-2
+  libwx_stedit2.8_0-1.2.5-11
+  lua-5.1.4-11
 
 Build requirements:
 (besides corresponding -devel packages)
-  binutils-20060817-1
-  cygport-0.3.10-1
-  gawk-3.1.6-1
-  gcc-core-3.4.4-3
-  gcc-g++-3.4.4-3
-  make-3.81-1
+  binutils-2.19.51-1
+  cygport-0.9.10-1
+  gawk-3.1.7-1
+  gcc4-core-4.3.4-3
+  gcc4-g++-4.3.4-3
+  make-3.81-2
   sed-4.1.5-2
 
 Canonical website:
@@ -35,120 +37,22 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack lua-wx-2.8.7.0-X-src.tar.bz2
+  unpack lua-wx-2.8.10.0-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./lua-wx-2.8.7.0-X.cygport all
+  cygport ./lua-wx-2.8.10.0-X.cygport all
 
 This will create:
-  /usr/src/lua-wx-2.8.7.0-X-src.tar.bz2
-  /usr/src/lua-wx-2.8.7.0-X.tar.bz2
+  /usr/src/lua-wx-2.8.10.0-X-src.tar.bz2
+  /usr/src/lua-wx-2.8.10.0-X.tar.bz2
 
 -------------------------------------------
 
-Files included in the binary package:
-
-  /etc/postinstall/lua-wx.sh
-  /usr/bin/cygwxlua_gtk2_wxbindadv-2.8-0.dll
-  /usr/bin/cygwxlua_gtk2_wxbindaui-2.8-0.dll
-  /usr/bin/cygwxlua_gtk2_wxbindbase-2.8-0.dll
-  /usr/bin/cygwxlua_gtk2_wxbindcore-2.8-0.dll
-  /usr/bin/cygwxlua_gtk2_wxbindgl-2.8-0.dll
-  /usr/bin/cygwxlua_gtk2_wxbindhtml-2.8-0.dll
-  /usr/bin/cygwxlua_gtk2_wxbindmedia-2.8-0.dll
-  /usr/bin/cygwxlua_gtk2_wxbindnet-2.8-0.dll
-  /usr/bin/cygwxlua_gtk2_wxbindrichtext-2.8-0.dll
-  /usr/bin/cygwxlua_gtk2_wxbindstc-2.8-0.dll
-  /usr/bin/cygwxlua_gtk2_wxbindxml-2.8-0.dll
-  /usr/bin/cygwxlua_gtk2_wxbindxrc-2.8-0.dll
-  /usr/bin/cygwxlua_gtk2_wxlua-2.8-0.dll
-  /usr/bin/cygwxlua_gtk2_wxluadebug-2.8-0.dll
-  /usr/bin/cygwxlua_gtk2_wxluasocket-2.8-0.dll
-  /usr/bin/wxlua.exe
-  /usr/bin/wxluaedit.exe
-  /usr/include/wx-2.8/wxbind/include/wxadv_bind.h
-  /usr/include/wx-2.8/wxbind/include/wxadv_wxladv.h
-  /usr/include/wx-2.8/wxbind/include/wxaui_bind.h
-  /usr/include/wx-2.8/wxbind/include/wxbase_bind.h
-  /usr/include/wx-2.8/wxbind/include/wxbinddefs.h
-  /usr/include/wx-2.8/wxbind/include/wxcore_bind.h
-  /usr/include/wx-2.8/wxbind/include/wxcore_wxlcore.h
-  /usr/include/wx-2.8/wxbind/include/wxgl_bind.h
-  /usr/include/wx-2.8/wxbind/include/wxhtml_bind.h
-  /usr/include/wx-2.8/wxbind/include/wxhtml_wxlhtml.h
-  /usr/include/wx-2.8/wxbind/include/wxmedia_bind.h
-  /usr/include/wx-2.8/wxbind/include/wxnet_bind.h
-  /usr/include/wx-2.8/wxbind/include/wxrichtext_bind.h
-  /usr/include/wx-2.8/wxbind/include/wxstc_bind.h
-  /usr/include/wx-2.8/wxbind/include/wxxml_bind.h
-  /usr/include/wx-2.8/wxbind/include/wxxrc_bind.h
-  /usr/include/wx-2.8/wxlua/include/wxlbind.h
-  /usr/include/wx-2.8/wxlua/include/wxlcallb.h
-  /usr/include/wx-2.8/wxlua/include/wxldefs.h
-  /usr/include/wx-2.8/wxlua/include/wxlstate.h
-  /usr/include/wx-2.8/wxlua/include/wxlua.h
-  /usr/include/wx-2.8/wxlua/include/wxlua_bind.h
-  /usr/include/wx-2.8/wxluadebug/include/wxldebug.h
-  /usr/include/wx-2.8/wxluadebug/include/wxlstack.h
-  /usr/include/wx-2.8/wxluadebug/include/wxluadebugdefs.h
-  /usr/include/wx-2.8/wxluasocket/include/wxldserv.h
-  /usr/include/wx-2.8/wxluasocket/include/wxldtarg.h
-  /usr/include/wx-2.8/wxluasocket/include/wxlsock.h
-  /usr/include/wx-2.8/wxluasocket/include/wxluasocket_bind.h
-  /usr/include/wx-2.8/wxluasocket/include/wxluasocketdefs.h
-  /usr/lib/libwxlua_gtk2_wxbindadv-2.8.dll.a
-  /usr/lib/libwxlua_gtk2_wxbindaui-2.8.dll.a
-  /usr/lib/libwxlua_gtk2_wxbindbase-2.8.dll.a
-  /usr/lib/libwxlua_gtk2_wxbindcore-2.8.dll.a
-  /usr/lib/libwxlua_gtk2_wxbindgl-2.8.dll.a
-  /usr/lib/libwxlua_gtk2_wxbindhtml-2.8.dll.a
-  /usr/lib/libwxlua_gtk2_wxbindmedia-2.8.dll.a
-  /usr/lib/libwxlua_gtk2_wxbindnet-2.8.dll.a
-  /usr/lib/libwxlua_gtk2_wxbindrichtext-2.8.dll.a
-  /usr/lib/libwxlua_gtk2_wxbindstc-2.8.dll.a
-  /usr/lib/libwxlua_gtk2_wxbindxml-2.8.dll.a
-  /usr/lib/libwxlua_gtk2_wxbindxrc-2.8.dll.a
-  /usr/lib/libwxlua_gtk2_wxlua-2.8.dll.a
-  /usr/lib/libwxlua_gtk2_wxluadebug-2.8.dll.a
-  /usr/lib/libwxlua_gtk2_wxluasocket-2.8.dll.a
-  /usr/lib/lua/5.1/wx.dll
-  /usr/share/applications/wxlua.desktop
-  /usr/share/mime/packages/wxlua.xml
-  /usr/share/pixmaps/wxlualogo.xpm
-  /usr/share/wxlua/samples/auidemo.wx.lua
-  /usr/share/wxlua/samples/bindings.wx.lua
-  /usr/share/wxlua/samples/calculator.wx.lua
-  /usr/share/wxlua/samples/calculator.xrc
-  /usr/share/wxlua/samples/choices.wx.lua
-  /usr/share/wxlua/samples/controls.wx.lua
-  /usr/share/wxlua/samples/coroutine.wx.lua
-  /usr/share/wxlua/samples/dialog.wx.lua
-  /usr/share/wxlua/samples/editor.wx.lua
-  /usr/share/wxlua/samples/grid.wx.lua
-  /usr/share/wxlua/samples/gridtable.wx.lua
-  /usr/share/wxlua/samples/htmlwin.wx.lua
-  /usr/share/wxlua/samples/luamodule.wx.lua
-  /usr/share/wxlua/samples/mdi.wx.lua
-  /usr/share/wxlua/samples/media.wx.lua
-  /usr/share/wxlua/samples/minimal.wx.lua
-  /usr/share/wxlua/samples/picker.wx.lua
-  /usr/share/wxlua/samples/printing.wx.lua
-  /usr/share/wxlua/samples/scribble.wx.lua
-  /usr/share/wxlua/samples/settings.wx.lua
-  /usr/share/wxlua/samples/sizer.wx.lua
-  /usr/share/wxlua/samples/tree.wx.lua
-  /usr/share/wxlua/samples/unittest.wx.lua
-  /usr/share/wxlua/samples/validator.wx.lua
-  /usr/share/wxlua/samples/veryminimal.wx.lua
-  /usr/share/wxlua/samples/wxluasudoku.wx.lua
-
-------------------
-
 Port Notes:
 
------ version 2.8.7.0-1 -----
-Initial release for Cygwin.
+----- version 2.8.10.0-1 -----
+Initial release for Cygwin 1.7.
 
 
 Cygwin port maintained by:

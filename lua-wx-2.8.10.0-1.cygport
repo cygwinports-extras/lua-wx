@@ -10,18 +10,12 @@ src_compile() {
 	cd ${B}
 	cygconf \
 		--includedir=/usr/include/wx-${WX_VERSION} \
-		--disable-customwxbind-install \
-		--disable-wxluacan-app \
-		--disable-wxluafreeze-app \
-		--enable-wxluadebug --enable-wxluasocket \
-		--enable-luamodule \
-		--enable-systemlua \
-		--with-wx-config=${WX_CONFIG}
+		--with-wx-config=${WX_CONFIG} \
 
 	sed -e 's|-I\./\$(|-I$(|g' -i {apps,modules}/Makefile
 
-	cygmake -j1 -C modules/ LDFLAGS=-Wl,--enable-auto-image-base
-	cygmake -j1 -C apps/ LDFLAGS_GUI=
+	cygmake -j1 -C modules/
+	cygmake -j1 -C apps/
 }
 
 src_install() {
